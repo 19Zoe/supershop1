@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                         String title = bundle.getString("title");
                         String time = bundle.getString("time");
                         int position=bundle.getInt("position");
-
+                        //ddd
                         books.add(1, new Book(R.drawable.ic_launcher_background, title,time));
                         //item.getOrder()在对应位置上添加数据
                         mainRecycleViewAdapter.notifyItemInserted(1);
