@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     public static final int MENU_ID_UPDATE = 2;
     public static final int MENU_ID_DELETE = 3;
 
-    private String[] Books = {"红楼梦", "活着", "狂人日记"};
+    private final String[] Books = {"红楼梦", "活着", "狂人日记"};
     private SearchView SearchView;
     private android.widget.ListView ListView;
 
@@ -108,7 +108,30 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewMain.setAdapter(mainRecycleViewAdapter);
 
         initFloatActionButton();//悬浮按钮
-        //Search();//搜索
+        //搜索操作实现
+//            setContentView(R.layout.activity_main);
+//            SearchView = (SearchView) findViewById(R.id.search_view);
+//            ListView = (ListView) findViewById(R.id.listView);
+//            ListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Books));
+//            ListView.setTextFilterEnabled(true);
+//            // 设置搜索文本监听
+//            SearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                // 当点击搜索按钮时触发该方法
+//                @Override
+//                public boolean onQueryTextSubmit(String query) {
+//                    return false;
+//                }
+
+                // 当搜索内容改变时触发该方法
+//                @Override
+//                public boolean onQueryTextChange(String newText) {
+//                    if (!TextUtils.isEmpty(newText)){
+//                        ListView.setFilterText(newText);
+//                    }else{
+//                        ListView.clearTextFilter();//                   }
+//                    return false;
+//                }
+//            });
 
     }
     //悬浮按钮响应操作
@@ -125,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {
